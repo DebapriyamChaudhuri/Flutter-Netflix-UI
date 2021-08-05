@@ -49,7 +49,21 @@ class _HomeScreenState extends State<HomeScreen> {
         slivers: [
           SliverToBoxAdapter(
             child: ContentHeader(featuredContent: sintelContent),
+          ),
+          SliverToBoxAdapter(
+            child: Previews(
+              title: 'Previews',
+              contentList: previews,
+            ),
           )
+
+          // SilverPadding(
+          //     padding: const EdgeInsets.only(top: 20.0),
+          //     silvers: [SilverToBoxAdapter(
+          //         child: Previews(
+          //       title: 'Previews',
+          //       contentList: previews,
+          //     ))]),
         ],
       ),
     );
