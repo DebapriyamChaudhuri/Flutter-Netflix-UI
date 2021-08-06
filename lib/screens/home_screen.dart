@@ -52,10 +52,32 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           SliverToBoxAdapter(
             child: Previews(
+              key: PageStorageKey('previews'),
               title: 'Previews',
               contentList: previews,
             ),
-          )
+          ),
+          SliverToBoxAdapter(
+            child: ContentList(
+              key: PageStorageKey('myList'),
+              title: 'My List',
+              contentList: myList,
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: ContentList(
+                key: PageStorageKey('originals'),
+                title: 'Netflix Originals',
+                contentList: originals,
+                isOriginals: true),
+          ),
+          SliverToBoxAdapter(
+            child: ContentList(
+              key: PageStorageKey('trending'),
+              title: 'Trending Shows',
+              contentList: trending,
+            ),
+          ),
 
           // SilverPadding(
           //     padding: const EdgeInsets.only(top: 20.0),
